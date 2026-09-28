@@ -5,10 +5,18 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "financial-research-system"
 version = "0.1.0"
-description = "Skill-led financial research with complete-source reading and independent audit"
+description = "Financial research workspace with evidence-first agent workflows"
 readme = "README.md"
-requires-python = ">=3.8"
-dependencies = ["jsonschema==4.23.0", "pypdf==5.0.1", "PyMuPDF==1.24.11", "openpyxl==3.1.5", "Pillow==10.4.0", "tomli==2.0.2; python_version < '3.11'"]
+requires-python = ">=3.12"
+dependencies = [
+    "httpx>=0.27,<1",
+    "jsonschema==4.23.0",
+    "openpyxl==3.1.5",
+    "Pillow==10.4.0",
+    "pydantic>=2.10,<3",
+    "pypdf==5.0.1",
+    "PyMuPDF==1.24.11",
+]
 classifiers = [
     "Programming Language :: Python :: 3.12",
     "Operating System :: Microsoft :: Windows",
@@ -17,8 +25,15 @@ classifiers = [
 
 [project.scripts]
 finresearch = "finresearch.cli:main"
+finagent = "finagent.cli:main"
 
-[tool.setuptools]
-# Run from a full source checkout, or use an editable install of that checkout.
-# A standalone wheel does not include resources/, web/, or config.json.
-packages = ["finresearch"]
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+documents = ["pdfplumber>=0.11,<1"]
+ocr = ["pytesseract>=0.3.10,<1"]
+
+[tool.setuptools.packages.find]
+include = ["finresearch*", "finagent*"]
+
+[tool.setuptools.package-data]
+finagent = ["data/*.json"]

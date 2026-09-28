@@ -4,6 +4,12 @@
 
 已提供七条业务线：数据结构化提取、财务报告分析、产业链影响分析、估值建模、研报事实核查、投资备忘录、研究质量评估。可手工导入材料，也可按需采集公开公告，逐份开展七线研究和反馈积累。候选Skill需要独立验证与历史回归，**默认不自动晋升稳定版本**。
 
+## Evidence-first Agent Extension
+
+`finagent/` adds a parallel, evidence-first implementation for the competition tasks: durable DAG checkpoints, actor and reviewer findings, deterministic financial calculations, public-data collection under a download quota, and page-level review templates. It never promotes parsed PDF or OCR output directly to a financial fact.
+
+The full system design and the source business specifications are maintained in [七赛题统一金融投研Agent平台架构设计.md](七赛题统一金融投研Agent平台架构设计.md) and [金融投研智能体体系构建思路.md](金融投研智能体体系构建思路.md). Run it with `python -m finagent`; install the additional agent dependencies using `python -m pip install -e '.[dev,documents,ocr]'`.
+
 ## 安装与离线检查
 
 支持以 **Python 3.12 + 完整源码checkout** 运行。`resources/`、`web/`、`config.json` 必须与 `finresearch/` 一起保留；当前不支持通过wheel安装或只复制Python包部署。

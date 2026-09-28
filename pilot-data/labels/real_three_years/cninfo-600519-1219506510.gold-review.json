@@ -1,0 +1,35 @@
+{
+  "schema": "finagent.gold-financial-review.v1",
+  "status": "pending_human_verification",
+  "source": {
+    "source_id": "cninfo-600519-1219506510",
+    "entity_id": "cn:600519",
+    "document_type": "annual_report",
+    "relative_path": "public_data\\cninfo\\cninfo\\600519\\2023\\1219506510.pdf",
+    "published_at": "2024-04-02",
+    "retrieved_at": "2026-09-26T14:32:11.238070Z",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2024-04-03/1219506510.PDF",
+    "source_tier": "official_regulatory_disclosure",
+    "license_label": "CNINFO public listed-company disclosure; review CNINFO terms before reuse",
+    "data_class": "public",
+    "version": "1219506510",
+    "reporting_period_end": "2023-12-31",
+    "dataset_split": "train"
+  },
+  "required_fields": [
+    "revenue",
+    "operating_cost",
+    "parent_net_income",
+    "operating_cash_flow",
+    "assets",
+    "liabilities",
+    "parent_equity",
+    "basic_eps",
+    "weighted_roe",
+    "cash_and_cash_equivalents",
+    "short_term_borrowings",
+    "long_term_interest_bearing_debt"
+  ],
+  "observations": [],
+  "instructions": "Add only values visually checked against the original document. Each observation must include field, raw_value, normalized_value, unit, period_end, period_kind, scope, page_number, table_name, row_name, column_name, locator, excerpt, reviewer, reviewed_at and review_reason."
+}

@@ -20,6 +20,12 @@ data/
 outputs/
 logs/
 private/
+public_data/
+.finagent/
+.finagent-pilot/
+.finagent-pilot-real/
+.finagent-workflow-smoke/
+.finagent-sample/
 *.log
 *.sqlite*
 *.db
@@ -35,6 +41,7 @@ private/
 .venv*/
 venv/
 env/
+.tools/
 __pycache__/
 *.py[cod]
 *.egg-info/
