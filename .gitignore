@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.venv/
+.tools/
+.env
+.finagent/
+.finagent-pilot/
+.finagent-pilot-real/
+.finagent-workflow-smoke/
+.finagent-sample/
+public_data/
+*.egg-info/
+build/
+dist/

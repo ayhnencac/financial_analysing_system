@@ -1,0 +1,35 @@
+{
+  "schema": "finagent.gold-financial-review.v1",
+  "status": "pending_human_verification",
+  "source": {
+    "source_id": "CN_1223097325",
+    "entity_id": "cn:600309",
+    "document_type": "annual_report",
+    "relative_path": ".finagent-sample\\样例数据库\\raw\\public\\annual_report\\CN_1223097325_万华化学：万华化学2024年年度报告.pdf",
+    "published_at": "2025-04-14",
+    "retrieved_at": "2026-09-25T15:47:28Z",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2025-04-15/1223097325.PDF",
+    "source_tier": "official_disclosure_platform",
+    "license_label": "public-disclosure-local-development-copy",
+    "data_class": "restricted",
+    "version": "1",
+    "reporting_period_end": "2024-12-31",
+    "dataset_split": "train"
+  },
+  "required_fields": [
+    "revenue",
+    "operating_cost",
+    "parent_net_income",
+    "operating_cash_flow",
+    "assets",
+    "liabilities",
+    "parent_equity",
+    "basic_eps",
+    "weighted_roe",
+    "cash_and_cash_equivalents",
+    "short_term_borrowings",
+    "long_term_interest_bearing_debt"
+  ],
+  "observations": [],
+  "instructions": "Add only values visually checked against the original document. Each observation must include field, raw_value, normalized_value, unit, period_end, period_kind, scope, page_number, table_name, row_name, column_name, locator, excerpt, reviewer, reviewed_at and review_reason."
+}
